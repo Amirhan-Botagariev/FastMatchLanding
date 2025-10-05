@@ -34,6 +34,7 @@ export default function ParticleTextAI({
   }, []);
 
   const positions = useMemo(() => {
+    if (!fontsReady) return new Float32Array();
     const c = document.createElement("canvas");
     const ctx = c.getContext("2d", { willReadFrequently: true })!;
     const W = 800, H = 400;
@@ -79,8 +80,6 @@ export default function ParticleTextAI({
           depthWrite={false}
           color={color}
           opacity={opacity}
-          // ярче за счёт аддитивного смешения
-          // @ts-ignore – проп пробрасывается в material
           blending={THREE.AdditiveBlending}
         />
       </Points>

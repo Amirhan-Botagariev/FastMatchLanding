@@ -87,7 +87,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="order-1 w-full text-center md:order-none md:text-left"
           >
-            <h1 className="font-extrabold leading-[1.05] text-[clamp(26px,6.2vw,64px)] max-w-[22ch] mx-auto md:mx-0">
+            <h1 className={`font-extrabold leading-[1.05] text-[clamp(26px,6.2vw,64px)] max-w-[22ch] mx-auto md:mx-0 ${montserrat.className}`}>
               Больше <span className="text-[#38B6FF]">интервью</span><br />
               Быстрее <span className="text-[#38B6FF]">оффер</span><br />
               Никакой <span className="text-[#38B6FF]">рутины</span>
